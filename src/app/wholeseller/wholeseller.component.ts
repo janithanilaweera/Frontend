@@ -8,16 +8,19 @@ import {User2} from '../user2';
   providers: [HttpService]
 })
 export class WholesellerComponent implements OnInit {
-  nic = 'jay';
-  dlocation = 'jay';
-  quantity = 1;
-  bprice = 1;
-  type =1;
+  nic: string;
+  dlocation: string;
+  quantity: number;
+  bprice: any = '';
+  type: number;
 
   users2: User2[];
+  selectedOption: string;
+  printedOption: string;
 
-
-
+  print() {
+    this.printedOption = this.selectedOption;
+  }
 
   postmethod(){
     debugger
@@ -25,9 +28,8 @@ export class WholesellerComponent implements OnInit {
       //bellow subcribe method for capture return val
       .subscribe( data => {this.users2 = data;}, error => {console.log(JSON.stringify(error.json()));});
   }
-  onOptionsSelected (val: any){
-    console.log(val);
-  }
+  // tslint:disable-next-line:typedef
+
 
   constructor(public service: HttpService) { }
 
