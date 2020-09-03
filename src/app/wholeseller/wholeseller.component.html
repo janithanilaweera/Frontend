@@ -1,0 +1,55 @@
+<form class="contact100-form validate-form flex-sb flex-w">
+  	<span class="contact100-form-title">
+					Delivery Order
+				</span>
+
+
+  <div >
+
+  <div >
+
+  <input type="text" [(ngModel)]="nic" name="nic" id="nic" class="form-control"  placeholder="Enter NIC" required autofocus>
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" [(ngModel)]="type" name="type" class="form-control"  placeholder="Type" required>
+    <span class="focus-input100"></span>
+  </div>
+  <div class="form-label-group">
+    <input type = "text" [(ngModel)]="quantity" name="quantity" class="form-control"  placeholder="quantity" required>
+    <span class="focus-input100"></span>
+  </div>
+  <div class="form-label-group">
+    <input type = "text" [(ngModel)]="dlocation" name="dlocation" class="form-control"  placeholder="dlocation" required>
+    <span class="focus-input100"></span>
+  </div>
+  <div class="form-label-group">
+    <input type = "text" [(ngModel)]="bprice" name="bprice" class="form-control"  placeholder="bprice" required>
+    <span class="focus-input100"></span>
+  </div>
+
+<div>
+  <button class="contact100-form-btn" (click)="postmethod()" name= "click" >Find</button>
+
+</div><br><br>
+
+  <div class="col-sm-5">
+    <label for="roomInput">Choose one from following</label>
+    <select name="roomInput" id="roomInput" class="form-control" #mySelect  (select)='onOptionsSelected(mySelect.value)'>
+      <option *ngFor="let hero of users2 " [value]="hero.nic" >
+        {{hero.nic}}{{hero.id}}{{hero.location}}{{hero.price}} </option>
+      // <option value="Lobby">Lobby</option>
+      //<option value="Hall">Hall</option>
+      // <option value="Deluxe">Deluxe</option>
+    </select>
+  </div>
+  <div class="checkbox mb-3"><br>
+    <label>
+      <input type="checkbox" value="remember-me"> Ready to purchase
+    </label>
+  </div>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
+</div>
+
+</form>

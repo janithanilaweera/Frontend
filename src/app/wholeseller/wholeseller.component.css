@@ -1,0 +1,68 @@
+.myelement {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+
+}
+form{
+  border: 2px solid orange;
+
+
+}
+.contact100-form-title{
+  clear: left;
+}
+
+
+.contact100-form-btn:hover {
+  background-color: coral;
+}
+.contact100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 130px;
+  height: 30px;
+  background-color: dodgerblue;
+  border-radius: 2px;
+
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  left: 100px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.form-control{
+
+  width: 500px;
+
+  height: 35px;
+  margin: 20px;
+}
+button{
+
+  position: absolute;
+
+
+}
