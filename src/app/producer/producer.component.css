@@ -1,0 +1,14 @@
+mat-form-field {
+  margin-right: 12px;
+}
+.myelement {
+  clear:left;
+  height:25px;
+  margin: 20px;
+ }
+ .container {
+  max-width: 960px;
+}
+
+
+.lh-condensed { line-height: 1.25; }
