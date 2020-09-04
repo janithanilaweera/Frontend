@@ -39,7 +39,7 @@
   <div class="col-sm-5">
     <label for="roomInput">Follwing shows top 3 cheapest. Choose one</label>
     <select name="roomInput" id="roomInput" class="form-control"  [(ngModel)]="selectedOption">
-      <option *ngFor="let hero of users2 " [value]="hero" >
+      <option *ngFor="let hero of users2 " [value]="hero.id" >
         NIC: {{hero.nic}} Location: {{hero.location}} Unit Price: {{hero.price}} </option>
 
     </select>
@@ -50,6 +50,11 @@
       <input type="checkbox" value="remember-me" (change)="print()">  Ready to purchase
     </label>
   </div>
+
+    <div>
+      <button class="contact100-form-btn" (click)="print()" name= "click2" >Buy</button>
+
+    </div><br><br>
   <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
 </div>
 

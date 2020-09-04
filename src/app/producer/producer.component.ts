@@ -1,6 +1,9 @@
 
 import {AutofillMonitor} from '@angular/cdk/text-field';
 import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild, OnInit} from '@angular/core';
+import {SharedService} from '../shared/shared.service';
+import {User2} from '../user2';
+
 @Component({
   selector: 'app-producer',
   templateUrl: './producer.component.html',
@@ -11,8 +14,9 @@ export class ProducerComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('last', {read: ElementRef}) lastName: ElementRef<HTMLElement>;
   firstNameAutofilled: boolean;
   lastNameAutofilled: boolean;
+  id: any;
 
-  constructor(private _autofill: AutofillMonitor) {}
+  constructor(private _autofill: AutofillMonitor, private sharedService: SharedService) {}
 
   ngAfterViewInit() {
     this._autofill.monitor(this.firstName)
@@ -27,6 +31,8 @@ export class ProducerComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+   this.id = this.sharedService.getUser();
+   console.log(this.id);
   }
 
 }
