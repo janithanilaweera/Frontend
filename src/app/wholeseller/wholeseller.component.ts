@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../http.service';
 import {User2} from '../user2';
+import {SharedService} from '../shared/shared.service';
+
 @Component({
   selector: 'app-wholeseller',
   templateUrl: './wholeseller.component.html',
@@ -15,11 +17,13 @@ export class WholesellerComponent implements OnInit {
   type: number;
 
   users2: User2[];
-  selectedOption: string;
-  printedOption: string;
+  selectedOption: any;
+  printedOption: any;
 
   print() {
     this.printedOption = this.selectedOption;
+    this.sharedservice.setUser(this.selectedOption);
+    console.log(this.selectedOption);
   }
 
   postmethod(){
@@ -31,7 +35,7 @@ export class WholesellerComponent implements OnInit {
   // tslint:disable-next-line:typedef
 
 
-  constructor(public service: HttpService) { }
+  constructor(public service: HttpService, public  sharedservice: SharedService) { }
 
   ngOnInit(): void {
   }
