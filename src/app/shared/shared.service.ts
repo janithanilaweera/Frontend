@@ -6,7 +6,7 @@ import {User2} from '../user2';
 export class SharedService {
  id: any;
  userlogin: boolean;
-
+loginusername: any;
   constructor() { }
 
   setUser (data){

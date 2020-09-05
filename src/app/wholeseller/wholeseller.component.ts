@@ -29,10 +29,10 @@ export class WholesellerComponent implements OnInit {
   postmethod(){
     debugger
     this.service.getOrder( this.nic, this.dlocation, this.quantity, this.bprice, this.type)
-      //bellow subcribe method for capture return val
       .subscribe( data => {this.users2 = data;}, error => {console.log(JSON.stringify(error.json()));});
-  }
-  // tslint:disable-next-line:typedef
+    //bellow subcribe method for capture return val
+    // }
+
 
 
   constructor(public service: HttpService, public  sharedservice: SharedService) { }
